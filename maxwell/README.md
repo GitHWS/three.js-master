@@ -141,11 +141,10 @@ const milkywayTexture = textureLoader.load('/textures/milky_way.png');
 // 은하수 Geometry, Material
 const milkywayGeometry = new THREE.PlaneGeometry(50, 50);
 const milkywayMaterial = new THREE.MeshStandardMaterial({
-  map: milkywayTexture,
   transparent: true,
   opacity: 0.4,
   alphaMap: milkywayTexture,
-  side: DoubleSide,
+  side: THREE.DoubleSide,
 });
 
 // 은하수 Object
