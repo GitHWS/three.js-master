@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { DoubleSide } from 'three';
+import { AdditiveBlending } from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader';
 
@@ -131,9 +131,10 @@ const particleMaterial = new THREE.PointsMaterial({
   color: 0xffffff,
   sizeAttenuation: true,
   size: 0.5,
-  map: particleTexture,
-  alphaMap: particleTexture,
   transparent: true,
+  depthWrite: true,
+  alphaMap: particleTexture,
+  blending: THREE.AdditiveBlending,
 });
 
 const particles = new THREE.Points(particleGeometry, particleMaterial);
@@ -148,11 +149,12 @@ for (let i = 0; i < particlesCount; i++) {
 // Milkyway
 const milkywayGeometry = new THREE.PlaneGeometry(50, 50);
 const milkywayMaterial = new THREE.MeshStandardMaterial({
-  map: milkywayTexture,
   transparent: true,
-  opacity: 0.4,
+  opacity: 0.5,
   alphaMap: milkywayTexture,
-  side: DoubleSide,
+  depthWrite: true,
+  blending: AdditiveBlending,
+  side: THREE.DoubleSide,
 });
 
 const milkyway = new THREE.Mesh(milkywayGeometry, milkywayMaterial);
