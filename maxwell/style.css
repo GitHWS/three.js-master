@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
+}
+
+button {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  background-color: #111111;
+  font-size: 20px;
+  transition: all 0.5s;
+
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555555;
+  box-shadow: 4px 4px 0 0 #ffffff;
+}
