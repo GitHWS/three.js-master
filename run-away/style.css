@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#webgl {
+  z-index: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.section {
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.section .textbox {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-family: 'Cherry Bomb One', cursive;
+  color: #fee081;
+  text-align: center;
+}
+
+.section .textbox > h1 {
+  font-size: 100px;
+  letter-spacing: 5px;
+  text-shadow: 5px 5px 0px #8a4600;
+}
+
+.section .textbox > p {
+  font-size: 30px;
+}
